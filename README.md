@@ -1,12 +1,12 @@
 # Webapp frontend
 - install react, clean up the starting application [√]
 - install react-router-dom, axios, bootstrap, bootstrap-icons [√]
-- create default layout []
-- create first route with homepage component []
-  - make an ajax request: get the movies from the server api []
-  - crate an env file to store the api server url
+- create default layout [√]
+- create first route with homepage component [√]
+  - make an ajax request: get the movies from the server api [√]
+  - create an env file to store the api server url []
   - print the results onto the page using components (movies list component, book card component...) []
-- create the second route for the single movie []
+- create the second route for the single movie [√]
   - make an ajax request: get the single movie from the server api []
   - print the results onto the page using components (reviews list and single movie card components) []
 - context-api []
