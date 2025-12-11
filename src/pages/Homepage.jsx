@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 
 export default function Homepage() {
   
-  const moviesApi = "http://localhost:3000/api/movies";
+  const moviesEndpoint = "http://localhost:3000/api/movies";
   const [ movies, setMovies ] = useState([]);
 
   useEffect(() => {
     axios
-      .get(moviesApi)
+      .get(moviesEndpoint)
       .then(response => {
         setMovies(response.data);
         /* console.log(response.data); */
