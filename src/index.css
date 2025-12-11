@@ -1,1 +1,13 @@
 @import url("bootstrap");
+
+.active{
+  text-decoration: none;
+}
+
+.card{
+  min-height: 100%;
+}
+
+a{
+  text-decoration: none;
+}

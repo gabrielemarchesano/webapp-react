@@ -17,23 +17,26 @@ export default function Homepage() {
   }, []);
 
   return (
-    <>
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+    <div className="container">
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 py-4">
         {
           movies.map((movie) => (
-            <div className="col" key={movie.id}>
+            <div className="col pb-4" key={movie.id}>
               <Link to={`/${movie.id}`}>
-                <div>
-                  <h1>{movie.title}</h1>
-                  <h2>{movie.director}</h2>
-                  <small>{movie.genre} - {movie.release_year}</small>
-                  <p>{movie.abstract}</p>
+                <div className="card">
+                  <img src={movie.image} alt="" className="card-img-top" />
+                  <div className="card-body">
+                    <h4 className="card-title">{movie.title}</h4>
+                    <span className="d-block">{movie.director}</span>
+                    <small className="card-text">{movie.genre} - {movie.release_year}</small>
+                    <p>{movie.abstract}</p>
+                  </div>
                 </div>
             </Link>
             </div>
           ))
         }
       </div>
-    </>
+    </div>
   )
 }
