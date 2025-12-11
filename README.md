@@ -1,6 +1,6 @@
 # Webapp frontend
 - install react, clean up the starting application [√]
-- install react-router-dom, axios, bootstrap, bootstrap-icons []
+- install react-router-dom, axios, bootstrap, bootstrap-icons [√]
 - create default layout []
 - create first route with homepage component []
   - make an ajax request: get the movies from the server api []
