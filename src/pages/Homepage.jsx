@@ -24,7 +24,7 @@ export default function Homepage() {
             <div className="col pb-4" key={movie.id}>
               <Link to={`/${movie.id}`}>
                 <div className="card">
-                  <img src={movie.image} alt="" className="card-img-top" />
+                  <img src={`http://localhost:3000/${movie.image}`} alt="" className="card-img-top" />
                   <div className="card-body">
                     <h4 className="card-title">{movie.title}</h4>
                     <span className="d-block">{movie.director}</span>
