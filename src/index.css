@@ -1,11 +1,29 @@
 @import url("bootstrap");
 
+@keyframes cardAnimation {
+  0% { scale: 1; }
+  100% { scale: 1.1;}
+}
+
 .active{
   text-decoration: none;
 }
 
 .card{
   min-height: 100%;
+}
+
+.cover-image{
+  min-height: 400px;
+  max-height: 430px;
+  object-fit: cover;
+}
+
+.card{
+  &:hover{
+  scale: 1.1;
+  animation: cardAnimation ease-in 200ms;
+  }
 }
 
 a{
