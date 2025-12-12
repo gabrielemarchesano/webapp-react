@@ -22,7 +22,7 @@ export default function Homepage() {
         {
           movies.map((movie) => (
             <div className="col pb-4" key={movie.id}>
-              <Link to={`/movies/${movie.id}`}>
+              <Link to={`/${movie.id}`}>
                 <div className="card movies-card shadow-sm">
                   <img src={`http://localhost:3000/${movie.image}`} alt="" className="card-img-top cover-image" />
                   <div className="card-body">

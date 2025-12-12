@@ -17,10 +17,10 @@ export default function MoviePage(){
   }, []);
 
   return(
-    <div className="container">  
+    <div className="container py-5">  
       <div className="d-flex justify-content-center">
       
-      <div className="card movie-card shadow-sm my-5">
+      <div className="card movie-card shadow-sm mb-5">
         <div className="row">
           <div className="col-4">
             <img src={`http://localhost:3000/${movie.image}`} alt="" className="card-img-top movie-cover"/>

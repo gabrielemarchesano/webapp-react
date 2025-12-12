@@ -3,14 +3,15 @@ import { Link } from "react-router-dom";
 export default function Footer(){
   return(
     <div className="container-fluid bg-light p-5">
-      <div className="row align-items-center">
+      <div className="row align-items-center py-2">
+
         <div className="logo col-8">
-          <Link to={"/"}><h1 className="m-0">Movies</h1></Link>
+          <Link to={"/"}><h1 className="m-0 pb-1">Movies</h1></Link>
           <p className="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque accusantium minus architecto officiis omnis repellendus placeat recusandae tempora, praesentium corrupti?</p>
         </div>
         
         <div className="links col-2">
-          <ul className="list-unstyled">
+          <ul className="list-unstyled mb-0">
             <li><a href="">Home</a></li>
             <li><a href="">About us</a></li>
             <li><a href="">Contacts</a></li>
