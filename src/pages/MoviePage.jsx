@@ -20,7 +20,7 @@ export default function MoviePage(){
     <div className="container">  
       <div className="d-flex justify-content-center">
       
-      <div className="card movie-card my-5">
+      <div className="card movie-card shadow-sm my-5">
         <div className="row">
           <div className="col-4">
             <img src={`http://localhost:3000/${movie.image}`} alt="" className="card-img-top movie-cover"/>
