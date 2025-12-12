@@ -38,10 +38,10 @@ export default function MoviePage(){
     <div className="reviews d-flex gap-5 justify-content-center">
         {
           movie.reviews?.map((review) => (
-            <div className="card reviews-card mb-3 p-2">
-              <span>{review.vote} <i class="bi bi-star-fill reviews-star"/> - {review.name}</span>
+            <div className="card reviews-card shadow mb-3 p-2" key={review.id}>
+              <span>{review.vote} <i className="bi bi-star-fill reviews-star"/> - {review.name}</span>
               <div className="card-body px-0">
-                <p className="card-text">"{review.text}"</p>
+                <p className="card-text fst-italic">"{review.text}"</p>
               </div>
             </div>
           ))
