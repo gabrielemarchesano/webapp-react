@@ -1,4 +1,5 @@
 @import url("bootstrap");
+@import url("bootstrap-icons");
 
 @keyframes cardAnimation {
   0% { scale: 1; }
@@ -9,8 +10,17 @@
   text-decoration: none;
 }
 
-.card{
+.movies-card{
   min-height: 100%;
+  
+  &:hover{
+  scale: 1.1;
+  animation: cardAnimation ease-in 200ms;
+  }
+}
+
+.movie-card{
+  width: 50%;
 }
 
 .cover-image{
@@ -19,11 +29,8 @@
   object-fit: cover;
 }
 
-.card{
-  &:hover{
-  scale: 1.1;
-  animation: cardAnimation ease-in 200ms;
-  }
+.reviews-card{
+  width: 50%;
 }
 
 a{
