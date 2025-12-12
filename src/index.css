@@ -20,7 +20,8 @@
 }
 
 .movie-card{
-  width: 50%;
+  width: 60%;
+  min-width: 50%;
 }
 
 .cover-image{
@@ -30,7 +31,11 @@
 }
 
 .reviews-card{
-  width: 50%;
+  width: 200px;
+}
+
+.reviews-star{
+  color: rgb(255, 229, 0);
 }
 
 a{

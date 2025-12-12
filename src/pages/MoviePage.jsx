@@ -23,7 +23,7 @@ export default function MoviePage(){
       <div className="card movie-card my-5">
         <div className="row">
           <div className="col-4">
-            <img src={`http://localhost:3000/${movie.image}`} alt="" className="card-img-top"/>
+            <img src={`http://localhost:3000/${movie.image}`} alt="" className="card-img-top movie-cover"/>
           </div>
           <div className="col-8">
             <div className="card-body">
@@ -35,12 +35,12 @@ export default function MoviePage(){
         </div>
       </div>
       </div>
-    <div className="reviews">
+    <div className="reviews d-flex gap-5 justify-content-center">
         {
-          movie.reviews.map((review) => (
-            <div className="card reviews-card">
-              <span>{review.vote} <i class="bi bi-star-fill"/> - {review.name}</span>
-              <div className="card-body">
+          movie.reviews?.map((review) => (
+            <div className="card reviews-card mb-3 p-2">
+              <span>{review.vote} <i class="bi bi-star-fill reviews-star"/> - {review.name}</span>
+              <div className="card-body px-0">
                 <p className="card-text">"{review.text}"</p>
               </div>
             </div>
