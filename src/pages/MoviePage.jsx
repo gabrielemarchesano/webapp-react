@@ -52,7 +52,7 @@ export default function MoviePage(){
     
     <div className="add-review">
       <h3 className="text-center">Leave your review!</h3>
-      <AddReviewForm />
+      <AddReviewForm movieId={id}/>
     </div>
   </div>
   )
