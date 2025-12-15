@@ -38,6 +38,11 @@
   color: rgb(255, 229, 0);
 }
 
+.add-review{
+  margin: 50px auto;
+  width: 50%;
+}
+
 a{
   text-decoration: none;
   color: black;
