@@ -2,13 +2,14 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useGlobal } from "../contexts/GlobalContext";
+import Loader from "../components/Loader";
 
 
 export default function Homepage() {
-  
+
   const moviesEndpoint = "http://localhost:3000/api/movies";
-  const [ movies, setMovies ] = useState([]);
-  const { setLoader } = useGlobal();
+  const [movies, setMovies] = useState([]);
+  const { loader, setLoader } = useGlobal();
 
   useEffect(() => {
     setLoader(true);
@@ -24,27 +25,32 @@ export default function Homepage() {
   }, []);
 
   return (
-    <div className="container">
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-5 py-4">
-        {
-          movies.map((movie) => (
-            <div className="col pb-4" key={movie.id}>
-              <Link to={`/${movie.id}`}>
-                <div className="card movies-card shadow-sm">
-                  <img src={`http://localhost:3000/${movie.image}`} alt="" className="card-img-top cover-image" />
-                  <div className="card-body">
-                    <h4 className="card-title">{movie.title}</h4>
-                    <span className="d-block">{movie.director}</span>
-                    <small className="card-text">{movie.genre} - {movie.release_year}</small>
-                    <hr/>
-                    <p>{movie.abstract}</p>
+    <>
+      {
+        loader ? <Loader /> :
+          <div className="container">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-5 py-4">
+              {
+                movies.map((movie) => (
+                  <div className="col pb-4" key={movie.id}>
+                    <Link to={`/${movie.id}`}>
+                      <div className="card movies-card shadow-sm">
+                        <img src={`http://localhost:3000/${movie.image}`} alt="" className="card-img-top cover-image" />
+                        <div className="card-body">
+                          <h4 className="card-title">{movie.title}</h4>
+                          <span className="d-block">{movie.director}</span>
+                          <small className="card-text">{movie.genre} - {movie.release_year}</small>
+                          <hr />
+                          <p>{movie.abstract}</p>
+                        </div>
+                      </div>
+                    </Link>
                   </div>
-                </div>
-            </Link>
+                ))
+              }
             </div>
-          ))
-        }
-      </div>
-    </div>
+          </div>
+      }
+    </>
   )
 }
