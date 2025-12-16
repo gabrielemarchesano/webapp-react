@@ -2,11 +2,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import DefaultLayout from "./layouts/DefaultLayout"
 import Homepage from "./pages/Homepage"
 import MoviePage from "./pages/MoviePage"
+import { GlobalProvider } from "./contexts/GlobalContext"
+
 
 function App() {
   
   return (
     <>
+    <GlobalProvider>
       <BrowserRouter>
         <Routes>
           <Route element={<DefaultLayout />}>
@@ -15,6 +18,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+    </GlobalProvider>
     </>
   )
 }
