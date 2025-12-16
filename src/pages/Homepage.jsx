@@ -1,19 +1,26 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useGlobal } from "../contexts/GlobalContext";
+
 
 export default function Homepage() {
   
   const moviesEndpoint = "http://localhost:3000/api/movies";
   const [ movies, setMovies ] = useState([]);
+  const { setLoader } = useGlobal();
 
   useEffect(() => {
+    setLoader(true);
     axios
       .get(moviesEndpoint)
       .then(response => {
         setMovies(response.data);
         /* console.log(response.data); */
-      });
+      })
+      .finally(() => {
+        setLoader(false)
+      })
   }, []);
 
   return (
